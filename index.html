@@ -8,21 +8,24 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <title>GPS Plantas Elécricas</title>
 
-        <style>
-            #video-container {
-            position: relative;
-            width: 100%; /* Ajusta el ancho según sea necesario */
-            height: 0;
-            padding-bottom: 56.25%; /* Esto mantiene la relación de aspecto 16:9 */
-            overflow: hidden;
+        <style type="text/css">
+            .video-container {
+                position: relative;
+                width: 100%; 
+                height: 0;
+                padding-bottom: 56.25%; /* Esto mantiene la relación de aspecto 16:9 */
+                overflow: hidden;
             }
-            #video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Esto asegura que el video cubra el área del div */
+            .video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Esto asegura que el video cubra el área del div */
+                background-position: center center; 
+                background-size: cover;
+                z-index: -1;
             }
         </style>
     </head>
@@ -30,142 +33,174 @@
 
         <div class="container-fluid m-0 p-0">
 
-        <!-- Menu-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid" >
-                <a class="navbar-brand" href="#">LOGO</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Somos</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Laboratorio</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Tel: +52 81 1015 7417</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </nav>
-
-        
-
-        <!--HERO-->
-        <div class="vw-100 d-flex justify-content-center align-items-center video-container" style="background-color:black; height: calc(100vh - 56px);">
-            <div class="container"> 
-                <div class="row">
-                    <div class="col-12 col-md-6 text-center">
-                        <p class="display-6">GPS Plantas Eléctricas</p>
-                        <p>En GPS PLANTAS ELÉCTRICAS nuestro mayor interés es trabajar en equipo con nuestros clientes y demás profesionales de la industria, para encontrar soluciones que satisfagan sus expectativas.</p>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        
+            <!-- Menu-->
+            <nav class="navbar navbar-expand-lg bg-transparent">
+                <div class="container-fluid" >
+                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" style="width:70px;"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Somos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Laboratorio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Tel: +52 81 1015 7417</a>
+                        </li>
+                    </ul>
                     </div>
                 </div>
-            </div>
-        </div>
+            </nav>
 
-        <!--EQUIPOS-->
-        <div class="vw-100 vh-100 d-flex justify-content-center align-items-center video-container">
-            <div class="container"> 
-                <div class="row">
-                    <div class="col-12 col-md-4 text-center">
-                        <p>Equipo móvil de<br>10KW a 1,200KW</p>
-                        <a href="">Cotiza Aquí</a>
-                        <div class="card m-auto mt-2" style="width:200px; height:150px;">IMG</div>
-                    </div>
-                    <div class="col-12 col-md-4 text-center">
-                        <p>Equipo monofásico de<br>9KW a 100KW</p>
-                        <a href="">Cotiza Aquí</a>
-                        <div class="card m-auto mt-2" style="width:200px; height:150px;">IMG</div>
-                    </div>
-                    <div class="col-12 col-md-4 text-center">
-                        <p>Equipo trifásico de<br>9KW a 4,500KW</p>
-                        <a href="">Cotiza Aquí</a>
-                        <div class="card m-auto mt-2" style="width:200px; height:150px;">IMG</div>
+            <!--HERO-->
+            <div class=" video-container">
+                <div class="vw-100 vh-100 d-flex justify-content-center align-items-center">
+                    <video autoplay loop muted playsinline>
+                        <source src="img/banner.mp4" type="video/mp4">
+                        <!-- Agrega aquí los formatos de video adicionales si los tienes -->
+                        Tu navegador no soporta el elemento de video.
+                    </video> 
+                    <!-- <div class="container"> 
+                        <div class="row">
+                            <div class="col-12 col-md-6 text-center" style="color:white;">
+                                <p class="display-6" style="text-shadow: black 2px 1px 1px;">GPS Plantas Eléctricas</p>
+                                <p style="text-shadow: black 2px 1px 1px;">En GPS PLANTAS ELÉCTRICAS nuestro mayor interés es trabajar en equipo con nuestros clientes y demás profesionales de la industria, para encontrar soluciones que satisfagan sus expectativas.</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <!--EQUIPOS-->
+            <div class="vw-100 vh-100 d-flex justify-content-center align-items-center" style="background-color:#A81A1B;">
+                <div class="container"> 
+                    <div class="row">
+                        <div class="col-12 col-md-4 text-center">
+                            <p>Equipo móvil de<br>10KW a 1,200KW</p>
+                            <a href="">Cotiza Aquí</a>
+                            <div class="card m-auto mt-2" style="width:200px; height:150px;">IMG</div>
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <p>Equipo monofásico de<br>9KW a 100KW</p>
+                            <a href="">Cotiza Aquí</a>
+                            <div class="card m-auto mt-2" style="width:200px; height:150px;">IMG</div>
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <p>Equipo trifásico de<br>9KW a 4,500KW</p>
+                            <a href="">Cotiza Aquí</a>
+                            <div class="card m-auto mt-2" style="width:200px; height:150px;">IMG</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!--SLOGAN-->
-        <div class="vw-100 vh-100 d-flex justify-content-center align-items-center text-center p-5" style="background-color:black;">
-            <p>En GPS PLANTAS ELÉCTRICAS<br>nuestro mayor interés es trabajar en equipo con nuestros clientes y demás profesionales de la industria, para encontrar soluciones que satisfagan sus expectativas.</p>
-        </div>
+            <!--SLOGAN-->
+            <div class="vw-100 vh-100 d-flex justify-content-center align-items-center text-center p-5" style="background-color:black;">
+                <div class="m-0 p-0">
+                    <p class="display-6" style="text-shadow: black 2px 1px 1px;">GPS Plantas Eléctricas</p>
+                    <p style="text-shadow: black 2px 1px 1px;">En GPS PLANTAS ELÉCTRICAS nuestro mayor interés es trabajar en equipo con nuestros clientes y demás profesionales de la industria, para encontrar soluciones que satisfagan sus expectativas.</p>
+                    <!-- <p>En GPS PLANTAS ELÉCTRICAS<br>nuestro mayor interés es trabajar en equipo con nuestros clientes y demás profesionales de la industria, para encontrar soluciones que satisfagan sus expectativas.</p> -->
+                </div>
+            </div>
 
-        <!--MARCAS-->
-        <div class="vw-100 vh-100 d-flex justify-content-center align-items-center text-center p-5">
-            <div class="w-100">
-                <div class="w-100 bg-danger text-light p-4 mb-4">
-                    <p class="display-6 m-0">NUESTRAS MARCAS</p>
-                </div> 
+            <!--MARCAS-->
+            <div class="vw-100 vh-100 d-flex justify-content-center align-items-center text-center p-5">
+                <div class="w-100">
+                    <div class="w-100 bg-danger text-light p-4 mb-4">
+                        <p class="display-6 m-0">NUESTRAS MARCAS</p>
+                    </div> 
 
-                <div class="row">
-                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                        <img src="img/saludo.jpg" alt="" class="w-75">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12 col-md-6 p-4 d-flex justify-content-center align-items-center">
-                                    <img src="img/Kohler.png" alt="" style="width:300px;">
-                                </div>
-                                <div class="col-12 col-md-6 p-4 d-flex justify-content-center align-items-center">
-                                    <p>Tercer fabricante mundial de grupos electrógenos.​KOHLER Power Systems EMEA, radicada en Brest (Bretaña, Francia), diseña, fabrica e instala grupos electrógenos de 1 a 4500 kVA, desde 1966. KOHLER Power Systems EMEA ofrece una gama completa de grupos electrógenos portátiles, generadores industriales y grupos de alquiler</p>
-                                </div>
-                                <div class="col-12 col-md-6 p-4 d-flex justify-content-center align-items-center">
-                                    <p>Modasa cuenta con una amplia trayectoria con más de 40 años de experiencia en el sector energía, respaldado por una fábrica de 100,000m2. Ha participado en el suministro eléctrico en más de 40,000 obras ejecutadas y más de 8,000 clientes atendidos. Exporta a más de 20 países con un total de más de 2,500,000 KW</p>
-                                </div>
-                                <div class="col-12 col-md-6 p-4 d-flex justify-content-center align-items-center">
-                                    <img src="img/modasa.png" alt="" style="width:350px;">
+                    <div class="row">
+                        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                            <img src="img/saludo.jpg" alt="" class="w-75">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 p-4 d-flex justify-content-center align-items-center">
+                                        <img src="img/Kohler.png" alt="" style="width:300px;">
+                                    </div>
+                                    <div class="col-12 col-md-6 p-4 d-flex justify-content-center align-items-center">
+                                        <p>Tercer fabricante mundial de grupos electrógenos.​KOHLER Power Systems EMEA, radicada en Brest (Bretaña, Francia), diseña, fabrica e instala grupos electrógenos de 1 a 4500 kVA, desde 1966. KOHLER Power Systems EMEA ofrece una gama completa de grupos electrógenos portátiles, generadores industriales y grupos de alquiler</p>
+                                    </div>
+                                    <div class="col-12 col-md-6 p-4 d-flex justify-content-center align-items-center">
+                                        <p>Modasa cuenta con una amplia trayectoria con más de 40 años de experiencia en el sector energía, respaldado por una fábrica de 100,000m2. Ha participado en el suministro eléctrico en más de 40,000 obras ejecutadas y más de 8,000 clientes atendidos. Exporta a más de 20 países con un total de más de 2,500,000 KW</p>
+                                    </div>
+                                    <div class="col-12 col-md-6 p-4 d-flex justify-content-center align-items-center">
+                                        <img src="img/modasa.png" alt="" style="width:350px;">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-                <!--QUINES SOMOS-->
-        <div class="vh-100 d-flex justify-content-center align-items-center text-center p-5">
-            <div class="w-100"  style="width:100%; max-width:1000px;">
-                <div class="w-100 bg-danger text-light p-4 mb-4">
-                    <p class="display-6 m-0">QUIENES SOMOS?</p>
-                    <p class="py-3">GPS PLANTAS ELÉCTRICAS S.A. DE C.V.</p>
+            <!--QUINES SOMOS-->
+            <div class="vh-100 d-flex justify-content-center align-items-center text-center p-5">
+                <div class="w-100"  style="width:100%; max-width:1000px;">
+                    <div class="w-100 bg-danger text-light p-4 mb-4">
+                        <p class="display-6 m-0">QUIENES SOMOS?</p>
+                        <p class="py-3">GPS PLANTAS ELÉCTRICAS S.A. DE C.V.</p>
 
-                    <p>Somos una Empresa 100% Mexicana creada con la finalidad de satisfacer las necesidades de nuestros clientes, dando soluciones con nuestros más de 20 AÑOS de experiencia en servicios en el área eléctrica. Nos especializamos en plantas generadoras de energía ya sea en venta, renta y/o mantenimiento preventivo, correctivo y pólizas de servicio con cobertura 24/7. Estamos presentes en la industria de las telecomunicaciones, hospitales, centros de datos, maquiladoras, metalurgia, minería, agricultura, espectáculos, edificios inteligentes, centros comerciales, construcción, proyectos de energía temporal y en prácticamente todos los ramos que requieren plantas eléctricas.</p>
-                </div> 
+                        <p>Somos una Empresa 100% Mexicana creada con la finalidad de satisfacer las necesidades de nuestros clientes, dando soluciones con nuestros más de 20 AÑOS de experiencia en servicios en el área eléctrica. Nos especializamos en plantas generadoras de energía ya sea en venta, renta y/o mantenimiento preventivo, correctivo y pólizas de servicio con cobertura 24/7. Estamos presentes en la industria de las telecomunicaciones, hospitales, centros de datos, maquiladoras, metalurgia, minería, agricultura, espectáculos, edificios inteligentes, centros comerciales, construcción, proyectos de energía temporal y en prácticamente todos los ramos que requieren plantas eléctricas.</p>
+                    </div> 
+                </div>
             </div>
-        </div>
 
-        <!--CONTACTO-->
-        <div class="vw-100 vh-100 d-flex justify-content-center align-items-center text-center p-5">
-            <div class="w-100"  style="width:100%; max-width:1000px;">
-                <h2>Contáctanos</h2>
-                <p>Con gusto lo atenderemos</p>
+            <!--CONTACTO-->
+            <div class="vw-100 d-flex justify-content-center align-items-center text-center p-5">
+                <div class="w-100"  style="width:100%; max-width:1000px;">
+                    <h2>Contáctanos</h2>
+                    <p>Con gusto lo atenderemos</p>
 
-                <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Nombre">
-                <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Email">
-                <input class="form-control form-control-lg m-2" type="text" placeholder="Asunto">
-                <textarea class="form-control form-control-lg m-2" id="comentarios" rows="3" placeholder="Comentarios"></textarea>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Nombre">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input class="form-control form-control-lg m-2 d-inline-block" type="mail" placeholder="Email">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input class="form-control form-control-lg m-2 d-inline-block" type="number" placeholder="Teléfono">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Empresa">
+                        </div>
+                    </div>
+                    <input class="form-control form-control-lg m-2" type="text" placeholder="Asunto">
+                    <textarea class="form-control form-control-lg m-2" id="comentarios" rows="3" placeholder="Comentarios"></textarea>
+
+                    <input type="submit" name="boton" class="btn btn-danger m-4" value="Aceptar">
+                    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57498.842083502546!2d-100.25272195824824!3d25.748172212127574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662eba34212c2fd%3A0x929adb2560c81caa!2sGPS%20Plantas%20El%C3%A9ctricas%2C%20S.A%20de%20C.V!5e0!3m2!1ses!2smx!4v1713035004500!5m2!1ses!2smx"  height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+                </div>
             </div>
-        </div>
 
-    </div>
+            <!--FOOTER-->
+            <div class="vw-100 d-flex justify-content-center align-items-center text-center p-5" style="background-color:#222222;">
+                <div class="w-100"  style="width:100%; max-width:1000px;">
+                    FOOTER
+                </div>
+            </div>
+
+        </div>
 
     </body>
 </html>
