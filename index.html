@@ -47,6 +47,10 @@
             .text-white a {
                 opacity:.5!important;
             }
+            .shadow {
+                transition: all ease .3s;
+            }
+        
         </style>
     </head>
     <body>
@@ -54,7 +58,7 @@
         <div class="container-fluid m-0 p-0">
 
             <!-- Menu-->
-            <nav class="navbar navbar-expand-lg bg-white sticky-top shadow">
+            <nav class="navbar navbar-expand-lg bg-white sticky-top">
                 <div class="container-fluid" >
                     <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" style="width:70px;"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +88,7 @@
 
             <!--HERO-->
             <div class=" video-container">
-                <div class="vw-100 vh-100 d-flex justify-content-center align-items-center" style="background-color:#D8D4D4;">
+                <div class="vw-100 vh-100 d-flex justify-content-center align-items-center">
                     <video autoplay loop muted playsinline>
                         <source src="img/banner.mp4" type="video/mp4">
                         <!-- Agrega aquí los formatos de video adicionales si los tienes -->
@@ -105,24 +109,28 @@
             </div>
 
             <!--EQUIPOS-->
-            <div class="vw-100 vh-100 p-5 text-white" style="background-color:#A81A1B;">
+            <div class="vw-100 p-5 text-white" style="background-color:#A81A1B; min-height:100vh;">
                 <p class="display-6 m-0 text-center">EQUIPOS</p>
-                <div class="container"> 
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-4 text-center p-5">
-                            <p class="text-white">Equipo móvil de<br>10KW a 1,200KW</p>
-                            <a href="" class="text-white">Cotiza Aquí</a>
-                            <div class="card m-auto mt-2 d-flex justify-content-center align-items-center" style="width:100%; height:auto"><img src="img/MÓVIL.jpg" alt="" class="w-100"></div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
+                        <p class="text-white">Equipo móvil de<br>10KW a 1,200KW</p>
+                        <a href="" class="text-white">Cotiza Aquí</a>
+                        <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
+                            <img src="img/MÓVIL.jpg" alt="" class="img-fluid">
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 text-center p-5">
-                            <p class="text-white">Equipo monofásico de<br>9KW a 100KW</p>
-                            <a href="" class="text-white">Cotiza Aquí</a>
-                            <div class="card m-auto mt-2 d-flex justify-content-center align-items-center" style="width:100%; height:auto"><img src="img/MONOFÁSICA.jpg" alt="" class="w-100"></div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
+                        <p class="text-white">Equipo monofásico de<br>9KW a 100KW</p>
+                        <a href="" class="text-white">Cotiza Aquí</a>
+                        <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
+                            <img src="img/MONOFÁSICA.jpg" alt="" class="img-fluid">
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 text-center p-5">
-                            <p class="text-white">Equipo trifásico de<br>9KW a 4,500KW</p>
-                            <a href="" class="text-white">Cotiza Aquí</a>
-                            <div class="card m-auto mt-2 d-flex justify-content-center align-items-center" style="width:100%; height:auto"><img src="img/TRIFÁSICA.jpg" alt="" class="w-100"></div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
+                        <p class="text-white">Equipo trifásico de<br>9KW a 4,500KW</p>
+                        <a href="" class="text-white">Cotiza Aquí</a>
+                        <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
+                            <img src="img/TRIFÁSICA.jpg" alt="" class=" img-fluid">
                         </div>
                     </div>
                 </div>
@@ -222,25 +230,27 @@
                     <h2>Contáctanos</h2>
                     <p>Con gusto lo atenderemos</p>
 
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Nombre" name="wk_nombre">
+                    <form  method="post" action="sendmail.php">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Nombre" name="wk_nombre">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input class="form-control form-control-lg m-2 d-inline-block" type="mail" placeholder="Email" name="wk_correo">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input class="form-control form-control-lg m-2 d-inline-block" type="number" placeholder="Teléfono" name="wk_telefono">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Empresa" name="wk_empresa">
+                            </div>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <input class="form-control form-control-lg m-2 d-inline-block" type="mail" placeholder="Email" name="wk_mail">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <input class="form-control form-control-lg m-2 d-inline-block" type="number" placeholder="Teléfono" name="wk_telefono">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Empresa" name="wk_empresa">
-                        </div>
-                    </div>
-                    <input class="form-control form-control-lg m-2" type="text" placeholder="Asunto" name="wk_asunto">
-                    <textarea class="form-control form-control-lg m-2" id="comentarios" rows="3" placeholder="Comentarios" name="wk_comentarios"></textarea>
+                        <input class="form-control form-control-lg m-2" type="text" placeholder="Asunto" name="wk_asunto">
+                        <textarea class="form-control form-control-lg m-2" id="comentarios" rows="3" placeholder="Comentarios" name="wk_comentarios"></textarea>
 
-                    <button class="btn btn-danger m-4" name="boton" value="Aceptar"><i class="bi bi-send"></i> Aceptar</button>
-                    
+                        <button class="btn btn-danger m-4" name="boton" value="Aceptar"><i class="bi bi-send"></i> Aceptar</button>
+                    </form>
+
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57498.842083502546!2d-100.25272195824824!3d25.748172212127574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662eba34212c2fd%3A0x929adb2560c81caa!2sGPS%20Plantas%20El%C3%A9ctricas%2C%20S.A%20de%20C.V!5e0!3m2!1ses!2smx!4v1713035004500!5m2!1ses!2smx"  height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
                 </div>
             </div>
@@ -293,10 +303,17 @@
                 }, i * 250);
             });
 
+            let once = false;
             window.addEventListener("scroll", ()=> {
-                if (window.scrollY == 0){
-                    console.log(window.scrollY);
-
+                if (window.scrollY !== 0){
+                    if (once == false){
+                        console.log(window.scrollY);
+                        once = true;
+                        document.querySelector(".navbar").classList.toggle("shadow");
+                    }
+                } else {
+                    once = false;
+                    document.querySelector(".navbar").classList.toggle("shadow");
                 }
             });
         });
