@@ -32,13 +32,15 @@
 
             .nav-link {
                 transform:translateY(-70px);
-                text-shadow: 3px 4px 6px rgba(128, 0, 0, 1);
-                transition: all ease .6s;
+                text-shadow: 3px 4px 40px rgba(128, 0, 0, 1);
+                /*text-shadow: 2px 3px 5px rgba(255,255,255,1);*/
+                transition: all ease .4s;
+                /*color:white;*/
             }
 
             .nav-link-animated {
                 transform:translateY(0);
-                text-shadow:none;
+                /*text-shadow:none;*/
             }   
 
             .text-white{
@@ -48,7 +50,10 @@
                 opacity:.5!important;
             }
             .navbar {
-                transition: all ease .3s;
+                transition: all ease .8s; 
+            }
+            .link-white {
+                color:white;
             }
         
         </style>
@@ -58,79 +63,69 @@
         <div class="container-fluid m-0 p-0">
 
             <!-- Menu-->
-            <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+            <nav class="navbar navbar-expand-md bg-transparent fixed-top">
                 <div class="container-fluid" >
                     <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" style="width:70px;"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 position-relative">
-                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="somos.html">Somos</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#servicios">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Contacto</a>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 position-relative">
+                            <li class="nav-item">
+                            <a class="nav-link link-white" aria-current="page" href="index.html">Inicio</a>
                             </li>
-                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Tel: +52 81 1015 7417</a>
-                        </li>
-                    </ul>
-                    </div>
+                            <li class="nav-item">
+                            <a class="nav-link link-white" aria-current="page" href="somos.html">Somos</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link link-white" aria-current="page" href="#servicios">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-white" aria-current="page" href="#contacto">Contacto</a>
+                                </li>
+                            <li class="nav-item">
+                            <a class="nav-link link-white" aria-current="page" href="#">Tel: +52 81 1015 7417</a>
+                            </li>
+                        </ul>
+                    </div> 
                 </div>
             </nav>
 
             <!--HERO-->
-            <div class=" video-container">
+            <div class="video-container">
                 <div class="vw-100 vh-100 d-flex justify-content-center align-items-center">
                     <video autoplay loop muted playsinline>
                         <source src="img/banner.mp4" type="video/mp4">
-                        <!-- Agrega aquí los formatos de video adicionales si los tienes -->
                         Tu navegador no soporta el elemento de video.
                     </video> 
-                    <!-- <div class="container"> 
-                        <div class="row">
-                            <div class="col-12 col-md-6 text-center" style="color:white;">
-                                <p class="display-6" style="text-shadow: black 2px 1px 1px;">GPS Plantas Eléctricas</p>
-                                <p style="text-shadow: black 2px 1px 1px;">En GPS PLANTAS ELÉCTRICAS nuestro mayor interés es trabajar en equipo con nuestros clientes y demás profesionales de la industria, para encontrar soluciones que satisfagan sus expectativas.</p>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
             <!--EQUIPOS-->
-            <div class="vw-100 p-5 text-white" style="background-color:#A81A1B; min-height:100vh;">
-                <p class="display-6 m-0 text-center">EQUIPOS</p>
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
-                        <p class="text-white">Equipo móvil de<br>10KW a 1,200KW</p>
-                        <a href="" class="text-white">Cotiza Aquí</a>
-                        <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
-                            <img src="img/MÓVIL.jpg" alt="" class="img-fluid">
+            <div class="vw-100 p-5 text-white d-flex justify-content-center align-items-center" style="background-color:#A81A1B; min-height:100vh;">
+                <div>  
+                    <p class="display-6 m-0 text-center">EQUIPOS</p>
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
+                            <p class="text-white">Equipo móvil de<br>10KW a 1,200KW</p>
+                            <a href="" class="text-white">Cotiza Aquí</a>
+                            <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
+                                <img src="img/movil.png" alt="" class="img-fluid">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
-                        <p class="text-white">Equipo monofásico de<br>9KW a 100KW</p>
-                        <a href="" class="text-white">Cotiza Aquí</a>
-                        <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
-                            <img src="img/MONOFÁSICA.jpg" alt="" class="img-fluid">
+                        <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
+                            <p class="text-white">Equipo monofásico de<br>9KW a 100KW</p>
+                            <a href="" class="text-white">Cotiza Aquí</a>
+                            <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
+                                <img src="img/monofasica.png" alt="" class="img-fluid">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
-                        <p class="text-white">Equipo trifásico de<br>9KW a 4,500KW</p>
-                        <a href="" class="text-white">Cotiza Aquí</a>
-                        <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
-                            <img src="img/TRIFÁSICA.jpg" alt="" class=" img-fluid">
+                        <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
+                            <p class="text-white">Equipo trifásico de<br>9KW a 4,500KW</p>
+                            <a href="" class="text-white">Cotiza Aquí</a>
+                            <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
+                                <img src="img/trifasica.png" alt="" class=" img-fluid">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -225,7 +220,7 @@
             </div>
 
             <!--CONTACTO-->
-            <div class="vw-100 d-flex justify-content-center align-items-center text-center p-5">
+            <div id="contacto" class="vw-100 d-flex justify-content-center align-items-center text-center p-5">
                 <div class="w-100"  style="width:100%; max-width:1000px;">
                     <h2>Contáctanos</h2>
                     <p>Con gusto lo atenderemos</p>
@@ -312,6 +307,10 @@
                         document.querySelector(".navbar").classList.toggle("shadow");
                         document.querySelector(".navbar").classList.toggle("bg-white");
                         document.querySelector(".navbar").classList.toggle("bg-transparent");
+              
+                        document.querySelectorAll(".nav-item").forEach(e => { 
+                            console.log("tst" + e);
+                        });
                     }
                 } else {
                     once = false;
