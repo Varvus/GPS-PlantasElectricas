@@ -236,20 +236,20 @@
                     <form  method="post" action="sendmail.php">
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Nombre" name="wk_nombre">
+                                <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Nombre" name="wk_nombre" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <input class="form-control form-control-lg m-2 d-inline-block" type="mail" placeholder="Email" name="wk_correo">
+                                <input class="form-control form-control-lg m-2 d-inline-block" type="mail" placeholder="Email" name="wk_correo" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <input class="form-control form-control-lg m-2 d-inline-block" type="number" placeholder="Teléfono" name="wk_telefono">
+                                <input class="form-control form-control-lg m-2 d-inline-block" type="number" placeholder="Teléfono" name="wk_telefono" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Empresa" name="wk_empresa">
+                                <input class="form-control form-control-lg m-2 d-inline-block" type="text" placeholder="Empresa" name="wk_empresa" required>
                             </div>
                         </div>
-                        <input class="form-control form-control-lg m-2" type="text" placeholder="Asunto" name="wk_asunto">
-                        <textarea class="form-control form-control-lg m-2" id="comentarios" rows="3" placeholder="Comentarios" name="wk_comentarios"></textarea>
+                        <input class="form-control form-control-lg m-2" type="text" placeholder="Asunto" name="wk_asunto" required>
+                        <textarea class="form-control form-control-lg m-2" id="comentarios" rows="3" placeholder="Comentarios" name="wk_comentarios" required></textarea>
 
                         <button class="btn btn-danger m-4" name="boton" value="Aceptar"><i class="bi bi-send"></i> Aceptar</button>
                     </form>

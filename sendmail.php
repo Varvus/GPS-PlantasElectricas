@@ -56,5 +56,5 @@
 
 <script language="javascript">
     alert("Hemos recibido tu mensaje, en breve recibirás una respuesta por parte de nuestro equipo.");
-    window.open("index.htm", "_self");
+    window.open("index.html", "_self");
 </script>
