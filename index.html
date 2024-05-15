@@ -35,7 +35,7 @@
                 text-shadow: 3px 4px 40px rgba(128, 0, 0, 1);
                 /*text-shadow: 2px 3px 5px rgba(255,255,255,1);*/
                 transition: all ease .4s;
-                /*color:white;*/
+                color:black;
             }
 
             .nav-link-animated {
@@ -44,7 +44,7 @@
             }   
 
             .text-white{
-                color:white;
+                color:white!important;
             }
             .text-white a {
                 opacity:.5!important;
@@ -80,19 +80,19 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 position-relative">
                             <li class="nav-item">
-                            <a class="nav-link link-white" aria-current="page" href="index.html">Inicio</a>
+                                <a class="nav-link link-white" aria-current="page" href="index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link link-white" aria-current="page" href="somos.html">Somos</a>
+                                <a class="nav-link link-white" aria-current="page" href="somos.html">Somos</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link link-white" aria-current="page" href="#servicios">Servicios</a>
+                                <a class="nav-link link-white" aria-current="page" href="#servicios">Servicios</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link link-white" aria-current="page" href="#contacto">Contacto</a>
-                                </li>
+                            </li>
                             <li class="nav-item">
-                            <a class="nav-link link-white" aria-current="page" href="#">Tel: +52 81 1015 7417</a>
+                                <a class="nav-link link-white" aria-current="page" href="#">Tel: +52 81 1015 7417</a>
                             </li>
                         </ul>
                     </div> 
@@ -311,14 +311,14 @@
             window.addEventListener("scroll", ()=> {
                 if (window.scrollY !== 0){
                     if (once == false){
-                        console.log(window.scrollY);
                         once = true;
                         document.querySelector(".navbar").classList.toggle("shadow");
                         document.querySelector(".navbar").classList.toggle("bg-white");
                         document.querySelector(".navbar").classList.toggle("bg-transparent");
               
                         document.querySelectorAll(".nav-item").forEach(e => { 
-                            console.log("tst" + e);
+                            e.children[0].classList.toggle("link-white");
+                            console.log( e.children[0] );
                         });
                     }
                 } else {
@@ -326,6 +326,10 @@
                     document.querySelector(".navbar").classList.toggle("shadow");
                     document.querySelector(".navbar").classList.toggle("bg-white");
                     document.querySelector(".navbar").classList.toggle("bg-transparent");
+
+                    document.querySelectorAll(".nav-item").forEach(e => { 
+                        e.children[0].classList.toggle("link-white");
+                    });
                 }
             });
         });
