@@ -45,7 +45,7 @@
         $_POST["wk_correo"] <> "" && 
         $_POST["wk_telefono"] <> "" && 
         $_POST["wk_asunto"] <> "" && 
-        $_POST["wk_mensaje"]){
+        $_POST["wk_comentarios"] <> ""){
         
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
