@@ -2,8 +2,8 @@
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
     $from = "marketing@gpsplantaselectricas.com";
-    //$to = "marketing@gpsplantaselectricas.com"; 
-    $to = "varvus@hotmail.com";
+    $to = "marketing@gpsplantaselectricas.com"; 
+    //$to = "varvus@hotmail.com";
     $subject = "Contacto desde la Página Web";
     
     $message = "
@@ -57,5 +57,5 @@
 
 <script language="javascript">
     alert("Hemos recibido tu mensaje, en breve recibirás una respuesta por parte de nuestro equipo.");
-    //window.open("index.html", "_self");
+    window.open("index.html", "_self");
 </script>
