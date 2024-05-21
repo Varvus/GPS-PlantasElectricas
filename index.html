@@ -46,7 +46,7 @@
             .text-white{
                 color:white!important;
             }
-            .text-white a {
+            .text-white .wa-link {
                 opacity:.5!important;
             }
             .navbar {
@@ -64,10 +64,11 @@
                 transform:scale(105%);
             }
 
-            a .card{
-                transition:all ease .4s
+            .wa-link .card{
+                transition:all ease .4s;
+                background-color:#D38F8D;
             }
-            a .card:hover {
+            .wa-link .card:hover {
                 border:#A81A1B solid 1px;
             }
 
@@ -83,6 +84,31 @@
                 color:black;
                 font-size:1.2rem;
                 text-shadow: 5px 4px 6px rgba(0,0,0,0.6);
+            }
+
+            .card-effect{
+                overflow:hidden;
+            }
+            .caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #333;
+                transition: all 0.5s;
+                background-color: #white;
+                transform: translateY(-100%);
+            }
+            .card-effect:hover .caption {
+                transform: translateY(0);
+            }
+            .card-effect:hover img {
+                transform: translateY(100%);
             }
         
         </style>
@@ -147,24 +173,39 @@
                     <div class="row">
                         <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
                             <p class="text-white">Equipo móvil de<br>10KW a 1,200KW</p>
-                            <a href="https://wa.me/8114837388" target="_blank" class="btn" style="background-color:#F8F9FA;"><i class="bi bi-whatsapp"></i> Cotiza Aquí</a>
-                            <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
-                                <img src="img/movil2.png" alt="" class="img-fluid">
-                            </div>
+                            <a href="https://wa.me/8114837388" target="_blank" class="btn wa-link" style="background-color:#F8F9FA;"><i class="bi bi-whatsapp"></i> Cotiza Aquí</a>
+                            <a href="https://wa.me/8114837388" target="_blank">
+                                <div class="card m-auto mt-2 d-flex justify-content-center align-items-center card-effect">
+                                    <img src="img/movil2.png" alt="" class="img-fluid">
+                                    <div class="caption">
+                                        Cotiza con Nosotros<br><i class="bi bi-whatsapp"></i>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
                             <p class="text-white">Equipo monofásico de<br>9KW a 100KW</p>
-                            <a href="https://wa.me/8114837388" target="_blank" class="btn" style="background-color:#F8F9FA;"><i class="bi bi-whatsapp"></i> Cotiza Aquí</a>
-                            <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
-                                <img src="img/monofasica2.png" alt="" class="img-fluid">
-                            </div>
+                            <a href="https://wa.me/8114837388" target="_blank" class="btn wa-link" style="background-color:#F8F9FA;"><i class="bi bi-whatsapp"></i> Cotiza Aquí</a>
+                            <a href="https://wa.me/8114837388" target="_blank">
+                                <div class="card m-auto mt-2 d-flex justify-content-center align-items-center card-effect">
+                                    <img src="img/monofasica2.png" alt="" class="img-fluid">
+                                    <div class="caption">
+                                        Cotiza con Nosotros<br><i class="bi bi-whatsapp"></i>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <div class="col-12 col-sm-6 col-lg-4 text-center p-5">
                             <p class="text-white">Equipo trifásico de<br>9KW a 4,500KW</p>
-                            <a href="https://wa.me/8114837388" target="_blank" class="btn" style="background-color:#F8F9FA;"><i class="bi bi-whatsapp"></i> Cotiza Aquí</a>
-                            <div class="card m-auto mt-2 d-flex justify-content-center align-items-center">
-                                <img src="img/trifasica2.png" alt="" class=" img-fluid">
-                            </div>
+                            <a href="https://wa.me/8114837388" target="_blank" class="btn wa-link" style="background-color:#F8F9FA;"><i class="bi bi-whatsapp"></i> Cotiza Aquí</a>
+                            <a href="https://wa.me/8114837388" target="_blank">
+                                <div class="card m-auto mt-2 d-flex justify-content-center align-items-center card-effect">
+                                    <img src="img/trifasica2.png" alt="" class="img-fluid">
+                                    <div class="caption">
+                                        Cotiza con Nosotros<br><i class="bi bi-whatsapp"></i>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -370,7 +411,17 @@
                         e.children[0].classList.toggle("link-white");
                     });
                 }
+
             });
+
+            /*elm = document.querySelector("#contacto");
+            checkVisible(elm);
+
+            function checkVisible(elm) {
+                var rect = elm.getBoundingClientRect();
+                var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                console.log( !(rect.bottom < 0 || rect.top - viewHeight >= 0) );
+            }*/
         });
     </script>
 </html>
