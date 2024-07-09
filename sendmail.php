@@ -2,7 +2,7 @@
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
 
-    $from = "marketing@gpsplantaselectricas.com";
+    $from = "gerente.ventas@gpsplantaselectricas.com";
     //$to = "gerente.ventas@gpsplantaselectricas.com"; 
     $to = "varvus@hotmail.com";
     $subject = "Contacto desde la Página Web";
