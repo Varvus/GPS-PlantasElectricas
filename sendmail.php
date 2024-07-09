@@ -1,6 +1,7 @@
 <?php
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
+
     $from = "marketing@gpsplantaselectricas.com";
     //$to = "gerente.ventas@gpsplantaselectricas.com"; 
     $to = "varvus@hotmail.com";
@@ -54,6 +55,8 @@
                 echo "El correo fue enviado. ";
             } else {
                 echo "El correo NO fue enviado. ";
+                $error_message = error_get_last()['message'] ?? 'Unknown error';
+                echo '<br>Error message: ' . $error_message;
             };
             
     }
