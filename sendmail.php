@@ -50,8 +50,12 @@
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
             $headers .= "From:" . $from;
-            mail($to,$subject,$message, $headers);
-            echo "El correo fue enviado. ";
+            if (mail($to,$subject,$message, $headers)){
+                echo "El correo fue enviado. ";
+            } else {
+                echo "El correo NO fue enviado. ";
+            };
+            
     }
 ?> 
 
