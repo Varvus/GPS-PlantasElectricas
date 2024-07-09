@@ -3,8 +3,8 @@
     error_reporting( E_ALL );
 
     $from = "gerente.ventas@gpsplantaselectricas.com";
-    //$to = "gerente.ventas@gpsplantaselectricas.com"; 
-    $to = "varvus@hotmail.com";
+    $to = "gerente.ventas@gpsplantaselectricas.com"; 
+    //$to = "varvus@hotmail.com";
     $subject = "Contacto desde la Página Web";
     
     $message = "
