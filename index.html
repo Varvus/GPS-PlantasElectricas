@@ -61,6 +61,11 @@
                 color:white;
             }
 
+            .show .navbar{
+                background-color:white;
+                color: #111;   
+            }
+
             .btn{
                 transition:all ease .3s;
             }
@@ -168,7 +173,7 @@
                                 <a class="nav-link link-white" aria-current="page" href="#contacto">Contacto</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link link-white" aria-current="page" href="tel:+528114095568">Tel: +52 81 1409 5568</a>
+                                <a class="nav-link link-white" aria-current="page" href="tel:+528114095568">Tel: +52 81 1409 5568 y +52 81 1088 1142</a>
                             </li>
                         </ul>
                     </div> 
@@ -422,31 +427,33 @@
                 }, i * 250);
             });
 
+            // Select the navbar element
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbar = document.querySelector('.navbar');
+
             let once = false;
             window.addEventListener("scroll", ()=> {
-                if (window.scrollY !== 0){
-                    if (once == false){
-                        once = true;
-                        document.querySelector(".navbar").classList.toggle("shadow");
-                        document.querySelector(".navbar").classList.toggle("bg-white");
-                        document.querySelector(".navbar").classList.toggle("bg-transparent");
-              
+                if (!navbarCollapse.classList.contains('show')) {
+                    if (window.scrollY !== 0){
+                        if (once == false){
+                            once = true;
+                            navbar.classList.add("shadow");
+                            navbar.classList.add("bg-white");
+                            navbar.classList.remove("bg-transparent");
+                            document.querySelectorAll(".nav-item").forEach(e => { 
+                                e.children[0].classList.remove("link-white");
+                            });
+                        }
+                    } else {
+                        once = false;
+                        navbar.classList.remove("shadow");
+                        navbar.classList.remove("bg-white");
+                        navbar.classList.add("bg-transparent");
                         document.querySelectorAll(".nav-item").forEach(e => { 
-                            e.children[0].classList.toggle("link-white");
-                            console.log( e.children[0] );
+                            e.children[0].classList.add("link-white");
                         });
                     }
-                } else {
-                    once = false;
-                    document.querySelector(".navbar").classList.toggle("shadow");
-                    document.querySelector(".navbar").classList.toggle("bg-white");
-                    document.querySelector(".navbar").classList.toggle("bg-transparent");
-
-                    document.querySelectorAll(".nav-item").forEach(e => { 
-                        e.children[0].classList.toggle("link-white");
-                    });
                 }
-
             });
 
             /*elm = document.querySelector("#contacto");
@@ -457,6 +464,42 @@
                 var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
                 console.log( !(rect.bottom < 0 || rect.top - viewHeight >= 0) );
             }*/
+
+            
+
+            // Create a MutationObserver to watch for changes to the class list
+            const observer = new MutationObserver(function(mutationsList, observer) {
+                for (const mutation of mutationsList) {
+                    // Check if the mutation type is attribute change and if the class attribute changed
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                        // Check if .show is present in the navbar-collapse class list
+                        if (navbarCollapse.classList.contains('show')) {
+                            // Action when .show is added
+                            if (!navbar.classList.contains('show-applied')) {  
+                                navbar.classList.add("shadow");
+                                navbar.classList.add("bg-white");
+                                navbar.classList.remove("bg-transparent");
+                                document.querySelectorAll(".nav-item").forEach(e => { 
+                                    e.children[0].classList.remove("link-white");
+                                });
+                            }
+                        } else {
+                            // Action when .show is removed
+                            if (navbar.classList.contains('show-applied')) {  
+                                navbar.classList.remove("shadow");
+                                navbar.classList.remove("bg-white");
+                                navbar.classList.add("bg-transparent");
+                                document.querySelectorAll(".nav-item").forEach(e => { 
+                                    e.children[0].classList.add("link-white");
+                                });
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Set up the observer to watch the navbar for class attribute changes
+            observer.observe(navbarCollapse, { attributes: true });
         });
     </script>
 </html>
